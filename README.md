@@ -385,8 +385,7 @@ This balanced workflow protects platform liquidity while maintaining worker trus
 ## 🔗 Repository & Submission Links
 
 - **GitHub Repository:** [GigShield — AI-Powered Parametric Income Protection](https://github.com/arimaakousei/Guidewire--AI-Powered-Parametric-Income-Protection-for-Food-Delivery-Partners.git)
-- **2-Minute Demo Video:** `[To be added before March 20]`
-
+- **2-Minute Demo Video:** (https://drive.google.com/file/d/1zPklg9xs5HAAzpNt1SBJzIKHkzmHH7Hd/view?usp=drive_link)
 ---
 
 *Built for Guidewire DEVTrails 2026 | © Team GigShield*
