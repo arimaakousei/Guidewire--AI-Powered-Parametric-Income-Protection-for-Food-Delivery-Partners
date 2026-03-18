@@ -312,6 +312,82 @@ Auto-Approve   Flag/Hold
 - UPI auto-debit from weekly platform payout (worker never has to manually renew)
 
 ---
+9. Adversarial Defense & Anti-Spoofing Strategy
+Market Crash Scenario
+
+In a coordinated fraud attempt, delivery workers may use advanced GPS spoofing tools to fake presence inside a disruption zone (e.g., red-alert rainfall region) while staying safely at home. This can trigger mass false payouts and threaten platform liquidity.
+
+GigShield adopts a multi-layer adversarial defense architecture that goes beyond simple GPS verification.
+
+1. Differentiating Genuine Stranded Workers vs Spoofers
+
+GigShield uses behavioral + environmental + platform activity intelligence to distinguish real disruption impact from spoofed claims.
+
+Key logic includes:
+
+Movement Pattern Validation:
+Genuine delivery partners exhibit realistic micro-movement patterns (stop-start routes, speed variation, order pickup dwell time).
+GPS spoofers often show:
+
+perfectly linear movement
+
+unrealistic speed jumps
+
+prolonged stationary coordinates
+
+Order Flow Correlation:
+Claims are validated against platform order assignment logs.
+If the platform is still dispatching orders in that zone and the worker is rejecting or inactive, the claim risk score increases.
+
+Weather Severity Cross-Verification:
+A disruption claim must match both:
+
+official weather API red-alert signals
+
+observable drop in order volume in the micro-zone
+
+Zone Entry Consistency:
+Workers who suddenly “teleport” into a disruption zone shortly before a trigger are flagged as high risk.
+
+2. Additional Data Signals Used Beyond GPS
+
+To detect coordinated fraud rings, GigShield analyzes multiple device and behavioral signals:
+
+Accelerometer & gyroscope data to verify real-world motion
+
+Network signal quality and tower triangulation consistency
+
+Device fingerprinting (IMEI hash / device model patterns)
+
+Historical delivery heatmap of worker activity
+
+Battery consumption patterns (navigation usage vs idle spoofing)
+
+Cluster analysis of simultaneous claims from identical residential coordinates
+
+Claim timing synchronization across workers (Telegram-coordinated fraud patterns)
+
+An Isolation Forest anomaly model continuously learns normal vs abnormal worker behavior patterns to dynamically update fraud risk scoring.
+
+3. Fair UX Handling for Flagged Claims
+
+GigShield ensures fraud protection without punishing honest workers.
+
+Instead of instant rejection:
+
+Claims with medium fraud score are moved to “Pending Verification”
+
+Worker receives a simple in-app notification requesting:
+
+optional proof of activity (recent order screenshot / network outage confirmation)
+
+Small provisional payout (e.g., 30%) may be released to reduce financial distress
+
+Trust Score system ensures long-tenure honest workers experience minimal friction
+
+Manual insurer review is triggered only for high-risk coordinated claim clusters
+
+This approach maintains worker trust while protecting insurer reserves.
 
 ## 🔗 Repository & Submission Links
 
